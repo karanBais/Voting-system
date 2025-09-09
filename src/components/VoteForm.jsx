@@ -24,19 +24,21 @@ const VoteForm = () => {
   };
 
   return (
-    <div className="p-4 bg-red-200  rounded-lg shadow-md">
-      <h2 className="text-xl font-bold mb-4">Vote for Class Monitor</h2>
+    <div className="p-4 bg-red-200 rounded-lg shadow-md">
+    
+      <h2 className="mb-4 text-xl font-bold">Vote for Class Monitor</h2>
+      
       <input
         type="text"
         value={studentName}
         onChange={(e) => setStudentName(e.target.value)}
         placeholder="Student Name"
-        className="p-2  rounded w-full mb-2"
+        className="w-full p-2 mb-2 rounded"
       />
       <select
         value={selectedCandidate}
         onChange={(e) => setSelectedCandidate(e.target.value)}
-        className="p-2  rounded w-full mb-4"
+        className="w-full p-2 mb-4 rounded"
       >
         <option value="" disabled>Select Monitor</option>
         {CandidateOptions.map((candidate) => (
@@ -47,7 +49,7 @@ const VoteForm = () => {
       </select>
       <button
         onClick={handleVote}
-        className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 mr-2"
+        className="px-4 py-2 mr-2 text-white bg-blue-500 rounded hover:bg-blue-700"
       >
         Vote
       </button>
